@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d Card Effect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        p {
+   font: bold 5em "Georgia", serif;
+   color: #90a4ae;
+}
+
+.z-text {
+   /* Tip: Apply CSS transforms here */
+   /* rotateX() == up/down */
+   /* rotateY() == left/right */
+
+}
+
+.z-layer:not(:first-child) {
+   color: #455a64;
+}
+.r3d {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px red solid;
+    border-radius: 20px;
+}
+
+
+    </style>
+</head>
+<body>
+    
+     <div class="r3d">
+    <p style="color: red;font-size: 80px; font-weight: 800;" class="hero-text">Hola</p>
+  </div>
+
+    <script src="./ztext.js"></script>
+    <script>
+        var ztxt = new Ztextify(".hero-text", {
+   depth: "30px",
+   layers: 8,
+   fade: true,
+   direction: "forwards",
+   event:"pointer",
+   eventRotation: "35deg"
+
+});
+    </script>
+</body>
+</html>
